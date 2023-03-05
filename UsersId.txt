@@ -1,0 +1,27 @@
+public class UsersId {
+    private String name;
+    private int id;
+
+    public UsersId(String n, int i) {
+        this.id = i;
+        this.name = n;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name.toLowerCase();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
+}

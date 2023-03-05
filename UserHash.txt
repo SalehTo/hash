@@ -1,0 +1,28 @@
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+public class UserHash {
+    public UserHash() {
+
+    }
+
+    public Hashtable<Integer, UsersId> newUserTable = new Hashtable<>();
+
+    public Hashtable<Integer, UsersId> getNewUserTable() {
+        return newUserTable;
+    }
+
+    public void createHash(UsersId a) {
+
+        newUserTable.put(a.getId(),a);
+    }
+
+    public void printTable() {
+        Enumeration<Integer> e = getNewUserTable().keys();
+
+        while (e.hasMoreElements()) {
+            int key = e.nextElement();
+            System.out.println("id : " + this.newUserTable.get(key).getId() + "\t\tName : " + this.newUserTable.get(key).getName());
+        }
+    }
+}
